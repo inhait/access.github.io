@@ -2,10 +2,46 @@
     background-color: black;
     font-family: 'Courier New', Courier, monospace;
     padding: 0%;
-
+    color: red;
+    font-family: 'PROBE10PXRegular';
+    font-weight: normal;
+    font-style: normal;
+    font-style: none;
 }
 
 h2 {
+    margin-top: 100px;
+    margin-left: 100px;
     color: red;
-    
+
+}
+i {
+    color: red;
+}
+/*                        */
+.info {
+    color: red;
+
+}
+.about {    
+    color: red;
+    margin-left: 100px ;
+    margin-bottom: 10px;
+}
+li {
+    list-style: none;
+    font-style: none;
+}
+a:active{text-decoration: none;}
+a:link{text-decoration: none;}
+a:hover{text-decoration: none;}
+a:visited {
+    text-transform: none;
+
+}
+.about2  {
+    color: red;
+    margin: 100px;
+
+
 }
