@@ -25,6 +25,48 @@ var txt = [
   "SCAN: __ 0012.0000.0553.0030",
   "SCAN: __ 0100.0000.0554.0080",
   "SCAN: __ 0020.0000.0553.0080",
+  
+  "section .text",
+  "; Export the entry point to the ELF linker or loader.  The conventional",
+  "; entry point is to override the default.",
+  " global _start",
+
+  "section .data.............",
+  "msg db  'Hello, world!',0xa ;our dear string",
+  "len equ $ - msg         ;length of our dear string",
+
+  "section .text",
+
+  "; linker puts the entry point here:",
+  "_start:",
+
+  "; Write the string to stdout:",
+
+  "mov edx,len ;message length",
+  "mov ecx,msg ;message to write",
+  "mov ebx,1   ;file descriptor (stdout)",
+  "mov eax,4   ;system call number (sys_write)",
+  "int 0x80    ;call kernel",
+
+  "; Exit via the kernel:",
+
+  "mov ebx,0   ;process' exit code",
+  "mov eax,1   ;system call number (sys_exit)",
+  "int 0x80    ;call kernel - this interrupt won't return",
+  "         .global go  ",
+  " .data               ",
+  "msg:     .ascii  .hELLO w0RLd\n ",
+  "handle:  .int    0 ",
+  "written: .int    0 ",
+  "                   ",
+  "         .text     ",
+  "go:                ",
+  "/*                 */",
+  " push           $-11 ",
+  "call _Gethandle@3    ",
+  
+
+
 ]
 
 var docfrag = document.createDocumentFragment();
