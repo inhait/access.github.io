@@ -1,6 +1,14 @@
+.header {
+  background-color: black;
+  border-left: 1px solid red;
+  margin: 0%;
+  margin-top: 15px;
+  padding: 5px;
+}
+
 body {
-    margin: 0;
-    padding: 5vh 5vw;
+    margin: 1px;
+    padding: 5pc;
     background: black;
     overflow:hidden;
   }
