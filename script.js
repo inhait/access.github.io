@@ -1,3 +1,9 @@
+// javascript
+// 
+//
+//
+// 
+
 var intervalID = window.setInterval(updateScreen, 200);
 var console = document.getElementById("console");
 const msg = document.querySelector(".msg");
